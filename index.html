@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>felicious:delicious</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/icons/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="loadMeals(), loadShoppingCard()">
+
+    <header id="headerMenu" class="header-container">
+        <img class="logo" src="img/logo_felicious_delicious.png" alt="felicious:delicious">
+        <div class="address hide-mobile"> Pizzahausen</div>
+        <div class="language hide-mobile">Deutsch</div>
+    </header>
+
+
+    <div>
+        <img class="top-img" src="img/pizza-oven.jpg" alt="Pizza-Ofen">
+        <div class="restaurant-logo-container">
+            <div class="restaurant-logo-box">
+                <div class="restaurant-logo-circle"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- shopping-basket -->
+
+
+    <div id="shoppingBasket" class="shopping-basket-container hide-mobile">
+        <img onclick="closeBasketMobile()" src="img/icons/x-mark-32.png" class="close-basket-mobile hide">
+        <div id="innerShoppingBasket">
+            <div class="shopping-basket-box">
+                <div class="shopping-basket-headline">Warenkorb</div>
+
+                <hr class="hyphen">
+                <div id="order" class="basket-order-container"></div>
+                <hr class="hyphen">
+
+                <div class="price-summary">
+                    <div>Zwischensumme</div>
+                    <div><span id="interSum">0,00</span> €</div>
+                </div>
+                <div id="deliveryRow" class="d-none">
+                    <div>Lieferkosten</div>
+                    <div><span id="deliveryCosts">2.50</span> €</div>
+                </div>
+                <div class="price-summary">
+                    <div class="total-price font-bold">Gesamtpreis</div>
+                    <div><span id="totalPrice">0,00</span> €</div>
+                </div>
+                <hr class="hyphen">
+
+                <div id="minOrderText" class="shopping-basket-text">
+                    Leider kannst Du noch nicht bestellen. Casa die Puglia liefert erst ab einem Mindestbestellwert von
+                    10,00 € (exkl. Lieferkosten).
+                </div>
+
+                <div id="orderBtn" onclick="orderMeals()" class="disabled order-btn">Bestellen</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- shopping-basket-mobile -->
+    <div id="basketMobile" class="basket-mobile hide">
+        <img src="img/icons/shopping-basket-48-white.png">
+        <div onclick="openBasketMobile()" class="mobile-price">Warenkorb &nbsp;<span id="totalPriceMobile">0,00</span> €
+        </div>
+    </div>
+
+    <!-- end shopping-basket-mobile -->
+    <!-- end shopping-basket -->
+
+    <div class="restaurant-info-container">
+        <h2 class="restaurant-name font-bold">Casa di Puglia</h2>
+        <div class="font-orange">
+            <img src="img/icons/star-16.png">
+            <img src="img/icons/star-16.png">
+            <img src="img/icons/star-16.png">
+            <img src="img/icons/star-16.png">
+            <img src="img/icons/star-16.png">
+            &nbsp; (1.986 Bewertungen)
+        </div>
+        <div class="restaurant-info"><b>Öffnungszeiten</b> von Montags bis Freitags in der Zeit von 11:00 bis 24:00 Uhr
+        </div>
+    </div>
+
+    <div class="favorite-meals hide-mobile">
+        <span class="font-orange">Beliebte Gerichte</span>
+        <div id="favMeals"></div>
+    </div>
+
+    <div class="main-content">
+
+
+        <!-- Meals Starter -->
+        <!-- <div class="menu-container">
+            <div class="meal-img-container">
+                <img src="img/starter.jpg" class="meal-img">
+            </div>
+            <div class="meal-kind font-bold">Vorspeise</div>
+        </div> -->
+
+        <div id="starterImg"></div>
+
+        <div id="starter"></div>
+
+        <!-- fills gray box after opening it -->
+
+
+
+
+        <!-- Meals Pizza -->
+        <!-- <div class="menu-container">
+            <div class="meal-img-container">
+                <img src="img/pizza.jpg" class="meal-img">
+            </div>
+            <div class="meal-kind font-bold">Pizza</div>
+        </div> -->
+
+        <div id="pizzaImg"></div>
+        <div id="pizza"></div>
+    </div>
+
+
+
+    <footer class="footer-container">
+        <a class="footer-row" href="#">Impressum</a>
+        <div class="footer-row">&#169; Copyright 2021 - felicious</div>
+
+
+    </footer>
+
+</body>
+
+</html>
